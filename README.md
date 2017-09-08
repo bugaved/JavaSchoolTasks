@@ -10,7 +10,7 @@ The exam includes 2 tasks to be done: [Pyramid](/tasks/Pyramid.md), [Zones](/tas
 
 ### Result ###
 
-* Author name : {Vyacheslav Rostov}
+* Author name : {Viacheslav Rostov}
 * Codeship : {PUT YOUR CODESHIP BAGDE HERE}
 
 Example of Codeship badge. Please remove the example before you send us the link. 
