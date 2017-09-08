@@ -11,8 +11,12 @@ public class PyramidBuilder {
     int width;
     int height;
 
-    public int[][] buildPyramid(List<Integer> inputNumbers) {
-        Collections.sort(inputNumbers);
+    public int[][] buildPyramid(List<Integer> inputNumbers) throws CannotBuildPyramidException {
+        if (inputNumbers.contains(null)) {
+            throw new CannotBuildPyramidException("null element");
+        } else {
+            Collections.sort(inputNumbers);
+        }
         for (int x : inputNumbers) {
             numberOfBlocks = numberOfBlocks + step;
             floors++;
@@ -27,28 +31,26 @@ public class PyramidBuilder {
         if (canBuild == true) {
             height = floors;
             width = floors * 2 - 1;
-            int k = 0;
-            int counter = 2;
+            int k = inputNumbers.size() - 1;
+
+
             intArray = new int[height][width];
-            for (int y = 0; y < height; y++) {
-                for (int z = 0; z < width; z++) {
-                    if ((z == (width / 2) - y) || (z == (width / 2) + y) || ((y >= counter) && ((z == width / 2 - y + counter) || z == width / 2 + y - counter))) {
+            for (int y = height - 1; y >= 0; y--) {
+                int counter = (height - 1) - y;
+                int numberOfZeros = counter;
+                for (int z = width - 1; z >= 0; z--) {
+                    if ((z == width - 1 - counter) && (z >= numberOfZeros)) {
                         intArray[y][z] = inputNumbers.get(k);
-                        k++;
-                        if (y == counter + 2) {
-                            counter = counter + 2;
-                        }
+                        k--;
+                        counter = counter + 2;
                     }
                 }
             }
-        } else
-
-        {
+        } else {
             throw new CannotBuildPyramidException("cannot build pyramid");
         }
         return intArray;
     }
-
 }
 
 
