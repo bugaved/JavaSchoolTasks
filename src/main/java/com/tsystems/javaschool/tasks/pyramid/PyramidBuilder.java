@@ -12,12 +12,17 @@ public class PyramidBuilder {
     int height;
 
     public int[][] buildPyramid(List<Integer> inputNumbers) throws CannotBuildPyramidException {
-        if (inputNumbers.contains(null)) {
-            throw new CannotBuildPyramidException("null element");
-        } else {
-            Collections.sort(inputNumbers);
-        }
-        for (int x : inputNumbers) {
+       if(inputNumbers.size()>100){
+           throw new CannotBuildPyramidException("too big");
+       }
+        else {
+           if (inputNumbers.contains(null)) {
+               throw new CannotBuildPyramidException("null element");
+           } else {
+               Collections.sort(inputNumbers);
+           }
+       }
+               for (int x : inputNumbers) {
             numberOfBlocks = numberOfBlocks + step;
             floors++;
             if (numberOfBlocks == inputNumbers.size()) {
