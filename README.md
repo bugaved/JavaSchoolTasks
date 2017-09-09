@@ -11,7 +11,7 @@ The exam includes 2 tasks to be done: [Pyramid](/tasks/Pyramid.md), [Zones](/tas
 ### Result ###
 
 * Author name : Viacheslav Rostov
-* Codeship : [ ![Codeship Status for tschool/javaschoolexam](https://app.codeship.com/projects/a9af8940-d130-0134-89a6-5e8aaaa2a5a2/status?branch=master)](https://app.codeship.com/projects/244600)
+* Codeship : [ ![Codeship Status for tschool/javaschoolexam](https://app.codeship.com/projects/244600/status?branch=master)](https://app.codeship.com/projects/244600)
 
 
 
