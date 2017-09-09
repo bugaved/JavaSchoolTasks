@@ -10,8 +10,9 @@ The exam includes 2 tasks to be done: [Pyramid](/tasks/Pyramid.md), [Zones](/tas
 
 ### Result ###
 
-* Author name : {Viacheslav Rostov}
-* Codeship : {https://app.codeship.com/projects/244600}
+* Author name : Viacheslav Rostov
+* Codeship : https://codeship.com/projects/244600/status?branch=master
+
 
 
 ### How to start?  ###
