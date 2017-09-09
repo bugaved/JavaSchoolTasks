@@ -6,7 +6,7 @@ public class RouteChecker {
 
     public boolean checkRoute(List<Zone> zoneState, List<Integer> requestedZoneIds) {
         boolean cr = true;
-        boolean connected = false;
+        boolean connected ;
         int conn = 0;
         if ((zoneState != null) && (requestedZoneIds != null)) {
             int[] x = new int[zoneState.size()];
@@ -30,6 +30,7 @@ public class RouteChecker {
                     }
                 }
             }
+
             for (int xx = 1; xx < requestedZoneIds.size(); xx++) {
                 if (x[requestedZoneIds.get(xx - 1)-1] != x[requestedZoneIds.get(xx)-1]) {
                     cr = false;
